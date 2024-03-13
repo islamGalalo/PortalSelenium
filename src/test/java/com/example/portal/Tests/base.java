@@ -1,6 +1,7 @@
 package com.example.portal.Tests;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -13,10 +14,10 @@ WebDriver driver;
     @BeforeTest
     public void setUp() {
 
-        driver = new EdgeDriver();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("https://clouddev.it-cores.com:8800/");
+        driver.get("https://hq.it-cores.com:8800/");
 
     }
     @AfterTest
